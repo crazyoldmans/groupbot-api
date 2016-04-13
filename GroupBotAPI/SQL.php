@@ -42,7 +42,7 @@ class SQL
 
         if ($query->rowCount()) {
             //$query->setFetchMode(\PDO::FETCH_CLASS, 'GroupBot\Types\User');
-            return $query->fetch();
+            return $query->fetch(MYSQLI_ASSOC);
         }
         return false;
     }
